@@ -40,7 +40,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapIdentityApi<IdentityUser>();
+app.MapGroup("/account").MapIdentityApi<IdentityUser>();
 
 app.UseHttpsRedirection();
 
